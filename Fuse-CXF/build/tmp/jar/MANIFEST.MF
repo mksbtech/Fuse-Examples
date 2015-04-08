@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Export-Package: com.milan.fuse.cxf.entity;uses:="javax.persistence",co
+ m.milan.fuse.cxf.exception,com.milan.fuse.cxf.jaxrs;uses:="com.milan.
+ fuse.cxf.service,com.milan.fuse.cxf.vo,javax.ws.rs",com.milan.fuse.cx
+ f.jaxws;uses:="com.milan.fuse.cxf.service,com.milan.fuse.cxf.vo,javax
+ .jws",com.milan.fuse.cxf.service;uses:="com.milan.fuse.cxf.exception,
+ com.milan.fuse.cxf.vo,javax.persistence",com.milan.fuse.cxf.vo;uses:=
+ "javax.xml.bind.annotation"
+Tool: Bnd-2.1.0.20130426-122213
+Bundle-Name: A Sample Jboss Fuse Cxf application build using Gradle
+Created-By: 1.7.0_75 (Oracle Corporation)
+Meta-Persistence: META-INF/persistence.xml
+DynamicImport-Package: *
+Bundle-Vendor: Milan Sonkar
+Bundle-Version: 1.0.0
+Bnd-LastModified: 1428531007000
+Bundle-ManifestVersion: 2
+Import-Package: javax.persistence;version="[1.1,2)",javax.jws,javax.ws
+ .rs;version="[2.0,3)",javax.xml.bind.annotation,org.apache.openjpa.ut
+ il;version="[2.3,3)",org.osgi.service.blueprint,org.apache.cxf.transp
+ ort.http;version="[2.7,3)",org.apache.openjpa.enhance;version="[2.3,3
+ )",io.fabric8.cxf,org.apache.curator.framework,com.mysql.jdbc;version
+ ="[5.1,6)",com.fasterxml.jackson.jaxrs.json;version="[2.0,3)",org.apa
+ che.commons.dbcp,javax.sql,javax.ws.rs.ext;version="[2.0,3)"
+Bundle-SymbolicName: com.milan.fuse.cxf
+
