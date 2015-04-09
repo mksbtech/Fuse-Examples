@@ -29,3 +29,16 @@
 <p>10.Create a profile myDSProfile for datasource bundle using following commands
 	<br/>profile-create myDSProfile
 	<br/>profile-edit --bundles mvn:commons-dbcp/commons-dbcp/1.4 --bundles mvn:mysql/mysql-connector-java/5.1.26 --bundles mvn:org.apache.geronimo.specs/geronimo-jta_1.1_spec/1.1.1 --bundles mvn:commons-pool/commons-pool/1.5.2 --bundles file:<Path to Fuse-Datasource-1.0.0.jar> myDSProfile</p>
+<br/>11.Start the childContainer using following command if not started already
+<br/>	container-start childContainer
+<br/>12.Add the new profile to the container using following commands
+<br/>	container-add-profile childContainer myDSProfile
+<br/>13.Check the container status using container-list command.It should be success once all dependencies have been downloaded.This may take sometime based on your internet speed.
+<br/>14.Connect to childContainer using container-connect childContainer command.It will ask for admin username and password.Please use the same as admin user
+<br/>15.Once connected to childContainer use following command to check the status of the bundle
+<br/>	osgi:list|grep Sample
+<br/>	This will display the above two bundles.Check the status should be active and Create.Sample output is below
+<br/>	[ 930] [Active     ] [Created     ] [       ] [   60] A Sample Jboss Fuse datasource bundle built using Gradle (1.0.0)
+<br/>16.Check the bundle details with following command
+<br/> osgi:ls 930
+<br/>It will display the datasource details exposed as OSGI service
