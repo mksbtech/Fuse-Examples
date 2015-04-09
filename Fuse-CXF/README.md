@@ -51,11 +51,14 @@
 <br/>	[PersonRestServiceImpl  ] [Started ] [/services/rest                                            ] [com.milan.fuse.cxf-cxf1898868527      ]
 <br/>	[PersonSoapServicePort  ] [Started ] [/PersonSoapService                                        ] [com.milan.fuse.cxf-cxf1898868527      ]
 <br/>The above output confirms that the two bundles have been deployed successfully.
+<br/>
+<br/>
+<br/>
 
+Testing
 <br/>
-#Testing
 <br/>
-#JAXWS
+JAXWS
 <br/>1.Download and install SOAP UI
 <br/>2.Create a SOAP  project with wsdl location as 
 <br/>http://localhost:8182/cxf/PersonSoapService?wsdl
@@ -83,6 +86,7 @@
 <br/>5.Fill in the data in the field and execute.You can add multiple person tag with different data in the fields.
 <br/>6.Check in the database.Based on input corresponding records should be created in DB
 
+<br/>
 <br/>
 #JAXRS
 <br/>1.Open browser and type following url
