@@ -88,7 +88,7 @@ JAXWS
 
 <br/>
 <br/>
-#JAXRS
+JAXRS
 <br/>1.Open browser and type following url
 <br/>http://localhost:8182/cxf/services/rest/personRestService/getAllPersons
 <br/>This will return the person records in Person table in DB in XML
