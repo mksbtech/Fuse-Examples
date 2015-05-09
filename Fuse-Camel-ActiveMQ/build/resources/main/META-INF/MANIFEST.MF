@@ -1,0 +1,33 @@
+Manifest-Version: 1.0
+Export-Package: com.milan.fuse.camel.route;uses:="org.apache.camel.bui
+ lder",com.milan.fuse.cxf.entity;uses:="javax.persistence",com.milan.f
+ use.cxf.exception,com.milan.fuse.cxf.jaxrs;uses:="com.milan.fuse.cxf.
+ service,com.milan.fuse.cxf.vo,javax.ws.rs",com.milan.fuse.cxf.jaxws;u
+ ses:="com.milan.fuse.cxf.vo,javax.jws",com.milan.fuse.cxf.service;use
+ s:="com.milan.fuse.cxf.exception,com.milan.fuse.cxf.vo,javax.persiste
+ nce",com.milan.fuse.cxf.vo;uses:="javax.xml.bind.annotation",org.apac
+ he.activemq.camel.component;version="5.9.0"
+Tool: Bnd-2.1.0.20130426-122213
+Bundle-Name: A Sample Jboss Fuse Camel-Cxf-Activemq application built 
+ using Gradle
+Created-By: 1.7.0_75 (Oracle Corporation)
+Meta-Persistence: META-INF/persistence.xml
+DynamicImport-Package: *
+Bundle-Vendor: Milan Sonkar
+Bundle-Version: 1.0.0
+Bnd-LastModified: 1428434770000
+Bundle-ManifestVersion: 2
+Import-Package: javax.persistence;version="[1.1,2)",javax.jws,javax.ws
+ .rs;version="[2.0,3)",javax.xml.bind.annotation,org.apache.camel;vers
+ ion="[2.12,3)",org.apache.camel.builder;version="[2.12,3)",org.apache
+ .camel.model;version="[2.12,3)",org.apache.activemq.broker;version="[
+ 5.7,6)",org.apache.activemq.pool,com.fasterxml.jackson.jaxrs.json;ver
+ sion="[2.0,3)",org.apache.openjpa.util;version="[2.3,3)",org.apache.o
+ penjpa.enhance;version="[2.3,3)",com.mysql.jdbc;version="[5.1,6)",jav
+ ax.sql,javax.ws.rs.ext;version="[2.0,3)",org.osgi.service.blueprint,o
+ rg.apache.curator.framework,org.apache.cxf.transport.http;version="[2
+ .7,3)",org.apache.activemq.camel.component;version="[5.9,6)",org.apac
+ he.camel.component.jms;version="[2.12,3)",io.fabric8.cxf,org.apache.c
+ ommons.dbcp
+Bundle-SymbolicName: com.milan.fuse.camel
+
