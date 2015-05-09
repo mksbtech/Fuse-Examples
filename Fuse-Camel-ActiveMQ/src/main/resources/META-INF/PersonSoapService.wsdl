@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="PersonSoapWS" targetNamespace="http://jaxws.cxf.fuse.milan.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://jaxws.cxf.fuse.milan.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://jaxws.cxf.fuse.milan.com/" elementFormDefault="unqualified" targetNamespace="http://jaxws.cxf.fuse.milan.com/" version="1.0">
+<xs:element name="Person" type="tns:personVO"/>
+<xs:element name="createPersonInBulk" type="tns:createPersonInBulk"/>
+<xs:element name="createPersonInBulkResponse" type="tns:createPersonInBulkResponse"/>
+<xs:complexType name="createPersonInBulk">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="person" type="tns:personVO"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="personVO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="age" type="xs:long"/>
+      <xs:element minOccurs="0" name="email" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="createPersonInBulkResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="createPersonInBulkResponse">
+    <wsdl:part name="parameters" element="tns:createPersonInBulkResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createPersonInBulk">
+    <wsdl:part name="parameters" element="tns:createPersonInBulk">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="PersonSoapService">
+    <wsdl:operation name="createPersonInBulk">
+      <wsdl:input name="createPersonInBulk" message="tns:createPersonInBulk">
+    </wsdl:input>
+      <wsdl:output name="createPersonInBulkResponse" message="tns:createPersonInBulkResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PersonSoapServiceServiceSoapBinding" type="tns:PersonSoapService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="createPersonInBulk">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createPersonInBulk">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createPersonInBulkResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PersonSoapWS">
+    <wsdl:port name="PersonSoapServicePort" binding="tns:PersonSoapServiceServiceSoapBinding">
+      <soap:address location="/PersonSoapService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
